@@ -1,4 +1,4 @@
-package util
+package data
 
 import (
 	"Algos1/src/arrays"
@@ -18,7 +18,7 @@ var DSort = []SortData{
 }
 
 var DArray = []ArrayData{
-	{Name: "Слуайный массив", Fun: arrays.RandomArray},
+	{Name: "Случайный массив", Fun: arrays.RandomArray},
 	{Name: "Отсортированный массив", Fun: arrays.SortedArray},
 	{Name: "Обратно отсортированный массив", Fun: arrays.ReverseSortedArray},
 	{Name: "Частично отсортированный массив", Fun: arrays.PartiallySortedArray},
