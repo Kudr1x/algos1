@@ -1,4 +1,4 @@
-package sorting
+package practice
 
 func SelectionSort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {

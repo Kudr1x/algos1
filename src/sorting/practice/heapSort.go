@@ -1,4 +1,4 @@
-package sorting
+package practice
 
 func HeapSort(arr []int) []int {
 	len := len(arr)

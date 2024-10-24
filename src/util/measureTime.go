@@ -11,5 +11,5 @@ func MeasureTime(sortFun func(arr []int) []int, arrFun func(length int) []int, l
 
 	sortFun(arr)
 
-	return time.Since(start).Milliseconds()
+	return time.Since(start).Microseconds()
 }

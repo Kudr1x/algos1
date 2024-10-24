@@ -1,4 +1,4 @@
-package sorting
+package practice
 
 func MergeSort(items []int) []int {
 	if len(items) < 2 {

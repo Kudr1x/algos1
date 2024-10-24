@@ -17,8 +17,12 @@ func DrawLine(sortData data.SortData) {
 		var arrY []string
 
 		for i := 1000; i <= 101000; i += 10000 {
-			arrX = append(arrX, strconv.Itoa(i))
-			arrY = append(arrY, strconv.FormatInt(util.MeasureTime(sortData.Fun, arrData.Fun, i), 10))
+			tempX := strconv.Itoa(i)
+			tempY := strconv.FormatInt(util.MeasureTime(sortData.Fun, arrData.Fun, i), 10)
+			arrX = append(arrX, tempX)
+			arrY = append(arrY, tempY)
+
+			fmt.Println(sortData.Name, tempX, tempY)
 		}
 
 		dataX := strings.Join(arrX, ",")
@@ -30,7 +34,7 @@ func DrawLine(sortData data.SortData) {
 
 	data := strings.Join(dataXY, ";")
 
-	cmd := exec.Command("python", "/home/kudrix/GolandProjects/Algos1/src/plot/displayPlot.py", data, sortData.Name)
+	cmd := exec.Command("python", "/home/kudrix/GolandProjects/Algos1/src/plot/displayPlotWithRegression.py", data, sortData.Name)
 
 	out, err := cmd.CombinedOutput()
 	if err != nil {

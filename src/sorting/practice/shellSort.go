@@ -1,4 +1,4 @@
-package sorting
+package practice
 
 func ShellSort(arr []int) []int {
 	for gap := len(arr) / 2; gap > 0; gap /= 2 {

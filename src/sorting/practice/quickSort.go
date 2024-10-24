@@ -1,4 +1,4 @@
-package sorting
+package practice
 
 func QuickSort(arr []int) []int {
 	if len(arr) < 2 {
