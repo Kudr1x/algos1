@@ -51,7 +51,7 @@ if __name__ == "__main__":
         plt.scatter(x_data, y_data, color=colors[i//2], label=arrays[i//2])
         plt.plot(x_values, y_values, label=f'Полиномиальная регрессия', color=colors[i//2])
         plt.xlabel('N')
-        plt.ylabel('Мс')
+        plt.ylabel('µs')
         plt.title(name)
         plt.legend()
         plt.grid(True)

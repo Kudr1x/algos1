@@ -2,13 +2,12 @@ package plot
 
 import (
 	"Algos1/src/data"
-	"fmt"
 	"os/exec"
 	"strconv"
 	"strings"
 )
 
-func DrawLineTheory(sorts data.TheoryData) {
+func DrawTheory(sorts data.TheoryData) {
 	var dataXY []string
 	var name = sorts.Name
 
@@ -39,10 +38,7 @@ func DrawLineTheory(sorts data.TheoryData) {
 
 	data := strings.Join(dataXY, ";")
 
-	cmd := exec.Command("python", "/home/kudrix/GolandProjects/Algos1/src/plot/displayPlot.py", data, name)
+	cmd := exec.Command("python", "/home/kudrix/GolandProjects/Algos1/src/plot/displayTheoryPlot.py", data, name)
 
-	out, err := cmd.CombinedOutput()
-	if err != nil {
-		fmt.Println(out)
-	}
+	cmd.CombinedOutput()
 }

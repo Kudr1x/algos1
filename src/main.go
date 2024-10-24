@@ -6,13 +6,14 @@ import (
 	"sync"
 )
 
-func main() {
-	launch()
-}
-
 func launch() {
 	//practiceGraphs()
-	theoryGraphs()
+	//theoryGraphs()
+	versusGraphs()
+}
+
+func versusGraphs() {
+	plot.DrawVersus()
 }
 
 func practiceGraphs() {
@@ -23,7 +24,7 @@ func practiceGraphs() {
 
 		go func(i data.SortData) {
 			defer wg.Done()
-			plot.DrawLine(i)
+			plot.DrawPractice(i)
 		}(i)
 	}
 
@@ -38,9 +39,13 @@ func theoryGraphs() {
 
 		go func(i data.TheoryData) {
 			defer wg.Done()
-			plot.DrawLineTheory(i)
+			plot.DrawTheory(i)
 		}(i)
 	}
 
 	wg.Wait()
+}
+
+func main() {
+	launch()
 }

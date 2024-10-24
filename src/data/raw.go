@@ -24,69 +24,77 @@ var DArray = []ArrayData{
 	{Name: "Обратно отсортированный массив", Fun: arrays.ReverseSortedArray},
 	{Name: "Частично отсортированный массив", Fun: arrays.PartiallySortedArray},
 }
-var BubbleSortTheory = TheoryData{
+var bubbleSortTheory = TheoryData{
 	Name:    "BubbleSort",
 	Best:    theory.BestBubble,
 	Average: theory.AverageBubble,
 	Wurst:   theory.WurstBubble,
 }
 
-var InsertionSortTheory = TheoryData{
+var insertionSortTheory = TheoryData{
 	Name:    "InsertionSort",
 	Best:    theory.BestInsertion,
 	Average: theory.AverageInsertion,
 	Wurst:   theory.WurstInsertion,
 }
 
-var MergeSortTheory = TheoryData{
+var mergeSortTheory = TheoryData{
 	Name:    "MergeSort",
 	Best:    theory.BestMerge,
 	Average: theory.AverageMerge,
 	Wurst:   theory.WurstMerge,
 }
 
-var QuickSortTheory = TheoryData{
+var quickSortTheory = TheoryData{
 	Name:    "QuickSort",
 	Best:    theory.BestQuick,
 	Average: theory.AverageQuick,
 	Wurst:   theory.WurstQuick,
 }
 
-var SelectionSortTheory = TheoryData{
+var selectionSortTheory = TheoryData{
 	Name:    "SelectionSort",
 	Best:    theory.BestSelection,
 	Average: theory.AverageSelection,
 	Wurst:   theory.WurstSelection,
 }
 
-var ShellSortTheory = TheoryData{
+var shellSortTheory = TheoryData{
 	Name:    "ShellSort",
 	Best:    theory.BestShell,
 	Average: theory.AverageShell,
 	Wurst:   theory.WurstShell,
 }
 
-var ShellSortPrattTheory = TheoryData{
+var shellSortPrattTheory = TheoryData{
 	Name:    "ShellSortPratt",
 	Best:    theory.BestShellPratt,
 	Average: theory.AverageShellPratt,
 	Wurst:   theory.WurstShellPratt,
 }
 
-var ShellSortHibbardTheory = TheoryData{
+var shellSortHibbardTheory = TheoryData{
 	Name:    "ShellSortHibbard",
 	Best:    theory.BestShellHibbard,
 	Average: theory.AverageShellHibbard,
 	Wurst:   theory.WurstShellHibbard,
 }
 
+var heapSortTheory = TheoryData{
+	Name:    "HeapSort",
+	Best:    theory.BestHeap,
+	Average: theory.AverageHeap,
+	Wurst:   theory.WurstHeap,
+}
+
 var DSortTheory = []TheoryData{
-	SelectionSortTheory,
-	BubbleSortTheory,
-	InsertionSortTheory,
-	MergeSortTheory,
-	QuickSortTheory,
-	ShellSortTheory,
-	ShellSortPrattTheory,
-	ShellSortHibbardTheory,
+	selectionSortTheory,
+	bubbleSortTheory,
+	insertionSortTheory,
+	mergeSortTheory,
+	quickSortTheory,
+	shellSortTheory,
+	shellSortPrattTheory,
+	shellSortHibbardTheory,
+	heapSortTheory,
 }
